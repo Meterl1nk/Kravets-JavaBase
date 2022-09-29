@@ -19,9 +19,5 @@ public class Main {
 
         System.out.println("Army's total attack size Lee and Min -" + " " + (Lee + Min));
 
-
-
-
-
     }
 }
