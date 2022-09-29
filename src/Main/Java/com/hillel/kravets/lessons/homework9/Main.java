@@ -7,28 +7,31 @@ public class Main {
 
         int min = 18;
         int max = 40;
-        final int COUNT_PLAYERS = 25;
-        int[] team1 = new int[COUNT_PLAYERS];
-        int[] team2 = new int[COUNT_PLAYERS];
-        double sumYearsTeam1 = 0;
-        double sumYearsTeam2 = 0;
-        double avgYearsTeam1 = 0;
-        double avgYearsTeam2 = 0;
+        final int CountPlayers = 25;
 
-        for (int i = 0; i < COUNT_PLAYERS; i++) {
+        int[] team1 = new int[CountPlayers];
+        int[] team2 = new int[CountPlayers];
+
+        double TotalYearsOldTeam1 = 0;
+        double TotalYearsOldTeam2 = 0;
+
+        double AverageYearsOldTeam1 = 0;
+        double AverageYearsOldTeam2 = 0;
+
+        for (int i = 0; i < CountPlayers; i++) {
             team1[i] = getRandomNumber(min, max);
-            sumYearsTeam1 += team1[i];
+            TotalYearsOldTeam1 += team1[i];
             team2[i] = getRandomNumber(min, max);
-            sumYearsTeam2 += team2[i];
+            TotalYearsOldTeam2 += team2[i];
         }
 
-        avgYearsTeam1 = sumYearsTeam1 / COUNT_PLAYERS;
-        avgYearsTeam2 = sumYearsTeam2 / COUNT_PLAYERS;
+        AverageYearsOldTeam1 = TotalYearsOldTeam1 / CountPlayers;
+        AverageYearsOldTeam2 = TotalYearsOldTeam2 / CountPlayers;
 
-        System.out.println("team1: " + Arrays.toString(team1));
-        System.out.println("team2: " + Arrays.toString(team2));
-        System.out.println("avg team1: " + avgYearsTeam1);
-        System.out.println("avg team2: " + avgYearsTeam2);
+        System.out.println("Team1: " + Arrays.toString(team1));
+        System.out.println("Team2: " + Arrays.toString(team2));
+        System.out.println("Average Team1: " + AverageYearsOldTeam1);
+        System.out.println("Average team2: " + AverageYearsOldTeam2);
     }
 
     static int getRandomNumber(int min, int max) {
